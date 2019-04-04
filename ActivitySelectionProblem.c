@@ -10,7 +10,7 @@ void Sort(int [],int [],int,int []);
 void swap(int*,int*);
 int main() 
 {
-    int T;
+    int T;     // T is the total no. of cases
     scanf("%d",&T);
     for(int i=0;i<T;i++)
     {
@@ -27,7 +27,7 @@ int main()
 }
 void MaxActivity(int S[],int F[],int size)
 {
-    int Index[size];
+    int Index[size];  // which store the activity no. 
     for(int i=0;i<size;i++)
        Index[i]=i+1;
     Sort(S,F,size,Index);
@@ -44,6 +44,7 @@ void MaxActivity(int S[],int F[],int size)
     printf("\n");
     return ;    
 }
+// for sorting you can use O(nlogn) algo. 
 void Sort(int S[],int F[],int size,int Index[])
 {
     for(int i=0;i<size;i++)
